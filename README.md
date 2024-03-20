@@ -2,7 +2,7 @@
 <p align="center">
   <img width="300" height="300" src="priv3.jpg">
   <br>
-  <i>Simple way to bypass bash command injection</i>i
+  <i>Simple way to bypass bash command injection</i>
 </p>
 
 ## Introduction
