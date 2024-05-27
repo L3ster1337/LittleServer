@@ -7,15 +7,15 @@ if (len(sys.argv) != 2):
 
 class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
-        # Definindo o arquivo que você quer subir
+        # Define shell file
         self.path = sys.argv[1]
         return http.server.SimpleHTTPRequestHandler.do_GET(self)
 
-# Defina a porta que você quer usar
+# Define usage local port
 PORT = int(sys.argv[2])
 
 my_handler = MyHttpRequestHandler
 
 with socketserver.TCPServer(("", PORT), my_handler) as httpd:
-    print("Servindo na porta:", PORT)
+    print("Listening on port: ", PORT)
     httpd.serve_forever()
